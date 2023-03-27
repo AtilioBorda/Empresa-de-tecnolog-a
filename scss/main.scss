@@ -444,6 +444,51 @@ h3{
     padding: 20px;
     grid-auto-flow: dense;
   }
+  .navbar {
+    background-color: #fff;
+    .navbar-toggler {
+      border: none;
+      .navbar-toggler-icon {
+        background-image: url('data:image/svg+xml;charset=utf-8,%3Csvg viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath stroke="%23000" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M4 7h22M4 15h22M4 23h22" /%3E%3C/svg%3E');
+      }
+    }
+    .navbar-brand {
+      display: flex;
+      align-items: center;
+      img {
+        width: 50px;
+        height: auto;
+        margin-right: 5px;
+      }
+    }
+    .navbar-nav {
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      li {
+        margin: 0 15px;
+        .nav-link {
+          color: #333;
+          &:hover {
+            color: #000;
+          }
+          &.active {
+            color: #000;
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+    @media (max-width: 991px) {
+      .navbar-nav {
+        flex-direction: column;
+        li {
+          margin: 10px 0;
+        }
+      }
+    }
+  }
+  
   
   @media (min-width: 600px) {
     .wide {
