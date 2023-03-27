@@ -271,12 +271,11 @@ ul, ul li {
   box-sizing: border-box;
   width: 50px;
 }
-
-.footer-col ul {
+.footer .footer-col ul {
   text-decoration: none;
   list-style: none;
 }
-.footer-col ul .footer-col ul li {
+.footer .footer-col ul li {
   font-size: 16px;
   text-decoration: none;
   color: #bbbbbb;
@@ -284,27 +283,35 @@ ul, ul li {
   margin-bottom: 10px;
   transition: all 0.3s ease;
 }
-.footer-col ul .footer-col ul li a:hover {
+.footer .footer-col ul li a:hover {
   color: #fff;
   padding-left: 6px;
 }
-
-.footer-col .social-link a {
+.footer .footer-col .social-link {
+  display: flex;
+  flex-wrap: wrap;
+}
+.footer .footer-col .social-link a {
   display: inline-block;
   height: 40px;
   width: 40px;
   background-color: rgba(255, 255, 255, 0.2);
-  margin: 0 10px 10 0px;
+  margin: 0 10px 10px 0;
   text-align: center;
   line-height: 40px;
   border-radius: 50%;
   color: #fff;
   transition: all 0.5s ease;
 }
-
-.footer-col .social-link a:hover {
+.footer .footer-col .social-link a:hover {
   color: #24262b;
   background-color: #fff;
+}
+@media only screen and (max-width: 767px) {
+  .footer .footer-col {
+    width: 50%;
+    margin-bottom: 30px;
+  }
 }
 
 form {
