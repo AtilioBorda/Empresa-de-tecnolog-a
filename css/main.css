@@ -6,13 +6,13 @@ body {
   width: 100%;
   margin: auto;
   overflow: hidden;
-  height: 900px;
+  height: 700px;
 }
 
 .slider ul {
   padding: 0;
   display: flex;
-  width: 400%;
+  width: 250%;
   animation: cambio 20s infinite alternate;
   animation-timing-function: linear;
 }
