@@ -558,4 +558,61 @@ h3{
       }
     }
   }
+  .prorecientes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    
+    .recientes {
+      width: 100%;
+      max-width: 768px;
+      margin: 0 auto;
+      
+      .text-center {
+        text-align: center;
+        
+        .productosrecientes {
+          max-width: 100%;
+          height: auto;
+        }
+      }
+    }
+    
+    @media screen and (min-width: 768px) {
+      .recientes {
+        display: flex;
+        justify-content: center;
+        
+        .text-center {
+          display: flex;
+          justify-content: space-between;
+          flex-wrap: wrap;
+          
+          .productosrecientes {
+            height: 200px;
+            width: 200px;
+            object-fit: cover;
+          }
+        }
+      }
+    }
+    
+    @media screen and (max-width: 767px) {
+      .recientes {
+        .text-center {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          
+          .productosrecientes {
+            max-width: 100%;
+            height: 200px;
+            width: 200px;
+            object-fit: cover;
+          }
+        }
+      }
+    }
+  }
   
