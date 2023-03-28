@@ -6,28 +6,25 @@ body {
   width: 100%;
   margin: auto;
   overflow: hidden;
-  height: 600px;
+  height: 700px;
 }
-
 .slider ul {
   padding: 0;
   display: flex;
-  width: 150%;
-  animation: cambio 20s infinite linear;
+  width: 400%;
+  animation: cambio 20s infinite alternate;
+  animation-timing-function: linear;
 }
-
-.slider li {
+.slider ul li {
   width: 100%;
   list-style: none;
 }
-
-.slider li img {
+.slider ul li img {
   width: 100%;
   height: auto;
 }
-
 @supports (object-fit: cover) {
-  .slider img {
+  .slider ul img {
     height: 100%;
     object-fit: cover;
     object-position: center;
@@ -37,28 +34,44 @@ body {
   0% {
     margin-left: 0;
   }
-  25% {
+  20% {
     margin-left: 0;
   }
-  30% {
+  25% {
     margin-left: -100%;
   }
-  55% {
+  45% {
     margin-left: -100%;
   }
-  60% {
+  50% {
     margin-left: -200%;
   }
-  85% {
+  70% {
     margin-left: -200%;
   }
-  90% {
+  75% {
     margin-left: -300%;
   }
   100% {
     margin-left: -300%;
   }
 }
+@media only screen and (max-width: 600px) {
+  .slider ul {
+    width: 800%;
+  }
+}
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+  .slider ul {
+    width: 600%;
+  }
+}
+@media only screen and (min-width: 1025px) {
+  .slider ul {
+    width: 400%;
+  }
+}
+
 .recientes img {
   width: 250px;
   height: 200px;
