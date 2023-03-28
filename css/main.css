@@ -6,15 +6,14 @@ body {
   width: 100%;
   margin: auto;
   overflow: hidden;
-  height: 700px;
+  height: 600px;
 }
 
 .slider ul {
   padding: 0;
   display: flex;
-  width: 250%;
-  animation: cambio 20s infinite alternate;
-  animation-timing-function: linear;
+  width: 150%;
+  animation: cambio 20s infinite linear;
 }
 
 .slider li {
@@ -38,22 +37,22 @@ body {
   0% {
     margin-left: 0;
   }
-  20% {
+  25% {
     margin-left: 0;
   }
-  25% {
+  30% {
     margin-left: -100%;
   }
-  45% {
+  55% {
     margin-left: -100%;
   }
-  50% {
+  60% {
     margin-left: -200%;
   }
-  70% {
+  85% {
     margin-left: -200%;
   }
-  75% {
+  90% {
     margin-left: -300%;
   }
   100% {
