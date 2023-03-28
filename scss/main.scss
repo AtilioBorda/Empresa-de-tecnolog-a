@@ -47,6 +47,30 @@ body{
         opacity: 1;
       }
     }
+
+    .prev,
+    .next {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 40px;
+      font-weight: bold;
+      color: white;
+      cursor: pointer;
+      transition: transform .2s;
+
+      &:hover {
+        transform: translateY(-50%) scale(1.2);
+      }
+    }
+
+    .prev {
+      left: 0;
+    }
+
+    .next {
+      right: 0;
+    }
   }
 
   > .menu {
@@ -70,16 +94,22 @@ body{
       }
     }
   }
+
+  @media screen and (max-width: 768px) {
+    .slider li {
+      height: 200px;
+      img {
+        height: 200px;
+      }
+    }
+
+    .slider img {
+      width: auto;
+      height: 100%;
+    }
+  }
 }
-section{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.slider img{
-    width: 1000px;
-    height: 400px;
-}
+
 
 
 .recientes img{

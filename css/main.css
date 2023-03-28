@@ -43,6 +43,27 @@ body {
 #carousel > ul.slider li:target {
   opacity: 1;
 }
+#carousel > ul.slider .prev,
+#carousel > ul.slider .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 40px;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+#carousel > ul.slider .prev:hover,
+#carousel > ul.slider .next:hover {
+  transform: translateY(-50%) scale(1.2);
+}
+#carousel > ul.slider .prev {
+  left: 0;
+}
+#carousel > ul.slider .next {
+  right: 0;
+}
 #carousel > .menu {
   text-align: center;
   margin: 20px;
@@ -62,16 +83,17 @@ body {
   font-size: 20px;
   border-radius: 100%;
 }
-
-section {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.slider img {
-  width: 1000px;
-  height: 400px;
+@media screen and (max-width: 768px) {
+  #carousel .slider li {
+    height: 200px;
+  }
+  #carousel .slider li img {
+    height: 200px;
+  }
+  #carousel .slider img {
+    width: auto;
+    height: 100%;
+  }
 }
 
 .recientes img {
