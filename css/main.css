@@ -483,4 +483,48 @@ nav.navbar button.navbar-toggler span.navbar-toggler-icon {
   }
 }
 
+.nuestrosproductos {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.nuestrosproductos h1 {
+  font-size: 3em;
+  margin-bottom: 20px;
+}
+.nuestrosproductos h3 {
+  font-size: 2em;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+section {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+section article {
+  margin: 10px;
+  width: 200px;
+}
+section article img {
+  width: 100%;
+}
+section article a {
+  color: black;
+  text-decoration: none;
+  display: block;
+  margin-top: 10px;
+}
+section article p {
+  font-size: 1.2em;
+  margin-top: 5px;
+  margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+  section article {
+    width: 100%;
+  }
+}
+
 /*# sourceMappingURL=main.css.map */
