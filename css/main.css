@@ -118,7 +118,7 @@ body {
   display: flex;
   align-items: center;
   margin-left: 10px;
-  color: #ffbf00;
+  color: goldenrod;
 }
 
 .review-list ul li .right h4 .gig-rating svg {
@@ -189,7 +189,7 @@ body {
 
 .review-section .stars-counters tr .star-progress-bar .progress-fill,
 .review-section .fit-progressbar-bar .progress-fill {
-  background: #2cdd9b;
+  background: goldenrod;
   height: 100%;
   position: absolute;
   left: 0;
@@ -273,16 +273,31 @@ body {
   display: flex;
   flex-direction: column;
 }
-
+.footer .footer-col .social-link ul {
+  list-style: none;
+}
+.footer .footer-col .social-link ul a {
+  color: #fff;
+  text-decoration: none;
+}
+.footer .footer-col .social-link ul a i {
+  font-size: 20px;
+  margin-right: 10px;
+  background-color: #fff;
+  color: #24262b;
+  padding: 8px;
+  border-radius: 50%;
+}
 @media only screen and (max-width: 767px) {
-  .footer-col {
+  .footer .footer-col {
     width: 50%;
     margin-bottom: 30px;
   }
-  .footer-col h4 {
+  .footer .footer-col h4 {
     margin-bottom: 20px;
   }
 }
+
 form {
   width: 450px;
   margin: auto;

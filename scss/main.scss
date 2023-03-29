@@ -129,7 +129,7 @@ body{
         display: flex;
         align-items: center;
         margin-left: 10px;
-        color: #ffbf00;
+        color: goldenrod;
     }
     .review-list ul li .right h4 .gig-rating svg {
         margin: 0 4px 0 0px;
@@ -189,7 +189,7 @@ body{
     }
     .review-section .stars-counters tr .star-progress-bar .progress-fill,
     .review-section .fit-progressbar-bar .progress-fill {
-        background: #2cdd9b;
+        background: goldenrod;
         height: 100%;
         position: absolute;
         left: 0;
@@ -217,7 +217,6 @@ body{
         justify-content: space-between;
         color: #95979d;
     }    
-
     .footer {
       background: #24262b;
       padding: 70px 0;
@@ -268,25 +267,44 @@ body{
               padding-left: 6px;
             }
           }
-        }
+        } 
     
         .social-link {
           display: flex;
           flex-direction: column;
+    
+          ul {
+            list-style: none;
+    
+            a {
+              color: #fff;
+              text-decoration: none;
+    
+              i {
+                font-size: 20px;
+                margin-right: 10px;
+                background-color: #fff;
+                color: #24262b;
+                padding: 8px;
+                border-radius: 50%;
+              }
+            }
+          }
+        }
+      }
+    
+      @media only screen and (max-width: 767px) {
+        .footer-col {
+          width: 50%;
+          margin-bottom: 30px;
+    
+          h4 {
+            margin-bottom: 20px;
+          }
         }
       }
     }
     
-    @media only screen and (max-width: 767px) {
-      .footer-col {
-        width: 50%;
-        margin-bottom: 30px;
-    
-        h4 {
-          margin-bottom: 20px;
-        }
-      }
-    }
     
       form{
         width: 450px;
