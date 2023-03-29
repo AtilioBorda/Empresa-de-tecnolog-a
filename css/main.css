@@ -244,6 +244,15 @@ body {
   font-weight: 500;
   position: relative;
 }
+.footer .footer-col h4::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 50px;
+  height: 2px;
+  background-color: #d35400;
+}
 .footer .footer-col ul {
   list-style: none;
 }
@@ -253,6 +262,8 @@ body {
   display: block;
   margin-bottom: 10px;
   transition: all 0.3s ease;
+  text-decoration: none;
+  color: #fff;
 }
 .footer .footer-col ul li:hover {
   color: #fff;

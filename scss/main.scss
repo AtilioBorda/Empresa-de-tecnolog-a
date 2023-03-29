@@ -239,6 +239,16 @@ body{
           margin-bottom: 35px;
           font-weight: 500;
           position: relative;
+    
+          &::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -5px;
+            width: 50px;
+            height: 2px;
+            background-color: #d35400;
+          }
         }
     
         ul {
@@ -250,6 +260,8 @@ body{
             display: block;
             margin-bottom: 10px;
             transition: all .3s ease;
+            text-decoration: none;
+            color: #fff;
     
             &:hover {
               color: #fff;
