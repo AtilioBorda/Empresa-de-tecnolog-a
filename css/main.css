@@ -308,7 +308,7 @@ form {
   border-radius: 7px;
 }
 form h2 {
-  color: #fff;
+  color: black;
   text-align: center;
   margin: 0;
   font-size: 30px;
@@ -335,7 +335,7 @@ form #button {
   padding: 12px;
 }
 form p {
-  color: #fff;
+  color: black;
 }
 
 section {
