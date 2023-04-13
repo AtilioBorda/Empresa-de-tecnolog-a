@@ -94,11 +94,9 @@ ul {
 }
 }
 
-
-
 .recientes img{
-  width: 250px;
-  height: 200px;
+  width: 400px;
+  height: 400px;
   padding: 30px;
   text-align: center;
 }
@@ -106,116 +104,79 @@ ul {
 body{
   background:#eee;
   }
-  .review-list ul li .left span {
-      width: 32px;
-      height: 32px;
-      display: inline-block;
+  .rev-section{
+    margin: auto;
+    padding: 0 1rem;
+    max-width: 1100px;
+    text-align: center;
   }
-  .review-list ul li .left {
-      flex: none;
-      max-width: none;
-      margin: 0 10px 0 0;
+  
+  .title{
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    color: rgb(50, 50, 50);
+    margin-bottom: .5rem;
   }
-  .review-list ul li .left span img {
-      border-radius: 50%;
+  .note{
+    font-size: 1.1rem;
+    color: rgb(150, 150, 150);
+    font-style: italic;
+      color: red;
   }
-  .review-list ul li .right h4 {
-      font-size: 16px;
-      margin: 0;
-      display: flex;
+  
+  .reviews{
+    margin: 2rem auto;
+    display: flex;
+    flex-wrap: wrap;
   }
-  .review-list ul li .right h4 .gig-rating {
-      display: flex;
-      align-items: center;
-      margin-left: 10px;
-      color: goldenrod;
+  .review{
+    margin: 0 1rem;
+    min-width: 300px;
+    flex: 1;
   }
-  .review-list ul li .right h4 .gig-rating svg {
-      margin: 0 4px 0 0px;
+  
+  .head-review{
+    margin: 1.75rem auto;
+    width: 150px;
+    height: 150px;
   }
-  .country .country-flag {
-      width: 16px;
-      height: 16px;
-      vertical-align: text-bottom;
-      margin: 0 7px 0 0px;
-      border: 1px solid #fff;
-      border-radius: 50px;
-      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  .head-review img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, .25);
   }
-  .country .country-name {
-      color: #95979d;
-      font-size: 13px;
-      font-weight: 600;
+  
+  .body-review{
+    background-color: rgb(238, 238, 238);
+    padding: 2.5rem;
+    box-shadow: 2px 2px 10px 3px rgb(225, 225, 225);
   }
-  .review-list ul li {
-      border-bottom: 1px solid #dadbdd;
-      padding: 0 0 30px;
-      margin: 0 0 30px; 
-      .right {
-          flex: auto;
-      } 
+  .name-review{
+    font-size: 1.5rem;
+    color: rgb(50, 50, 50);
+    margin-bottom: .25rem;
   }
-  .review-list ul li .review-description {
-      margin: 20px 0 0;
+  .place-review{
+    color: black;
+    font-style: italic;
   }
-  .review-list ul li .review-description p {
-      font-size: 14px;
-      margin: 0;
+  .rating{
+    color: rgb(253, 180, 42);
+    margin: 1rem 0;
   }
-  .review-list ul li .publish {
-      font-size: 13px;
-      color: #95979d;
-  } 
-  .review-section h4 {
-      font-size: 20px;
-      color: #222325;
-      font-weight: 700;
+  .desc-review{
+    line-height: 1.5rem;
+    letter-spacing: 1px;
+    color: rgb(150, 150, 150);
   }
-  .review-section .stars-counters tr .stars-filter.fit-button {
-      padding: 6px;
-      border: none;
-      color: #4a73e8;
-      text-align: left;
+  
+  @media (max-width: 678px){
+    .review{
+      margin-top: 1.5rem;
+    }
   }
-  .review-section .fit-progressbar-bar .fit-progressbar-background {
-      position: relative;
-      height: 8px;
-      background: #efeff0;
-      flex: 1;
-      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
-      background-color: #ffffff;
-      border-radius: 999px;
-  }
-  .review-section .stars-counters tr .star-progress-bar .progress-fill,
-  .review-section .fit-progressbar-bar .progress-fill {
-      background: goldenrod;
-      height: 100%;
-      position: absolute;
-      left: 0;
-      z-index: 1;
-      border-radius: 999px; 
-  }
-  .review-section .fit-progressbar-bar {
-      display: flex;
-      align-items: center;
-  }
-  .review-section .stars-counters td {
-      white-space: nowrap;
-  }
-  .review-section .stars-counters tr .progress-bar-container {
-      width: 100%;
-      padding: 0 10px 0 6px;
-      margin: auto;
-  }
-  .ranking h6 {
-      font-weight: 600;
-      padding-bottom: 16px;
-  }
-  .ranking li {
-      display: flex;
-      justify-content: space-between;
-      color: #95979d;
-  }    
   .footer {
     background: #24262b;
     padding: 70px 0;
@@ -395,26 +356,34 @@ h1{
 nav.navbar {
   background-color: #f5f6f7;
   padding: 2rem;
+
   .navbar-brand img {
     width: 50px;
+    max-height: 50px;
   }
+
   .navbar-nav {
     display: flex;
     justify-content: center;
     align-items: center;
+
     .nav-item {
       margin: 0 10px;
+
       a {
         font-size: 1.2rem;
         color: #333;
+
         &.active {
           color: #007bff;
         }
       }
     }
   }
+
   button.navbar-toggler {
     border: none;
+
     span.navbar-toggler-icon {
       display: block;
       width: 24px;
@@ -424,6 +393,27 @@ nav.navbar {
       background-size: contain;
     }
   }
+
+  &.navbar {
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgb(253, 253, 253);
+    font-size: 1.2rem;
+
+    .nav-link {
+      color: grey;
+      font-weight: 500;
+      margin: 0 15px;
+
+      &:hover {
+        color: #5a5a5a;
+      }
+    }
+
+    .nav-item.active .nav-link {
+      color: grey;
+    }
+  }
+
   @media (max-width: 767px) {
     button.navbar-toggler {
       display: block;
@@ -566,10 +556,8 @@ section {
         height: auto;
       }
     }
-  }
-  
-  @media screen and (min-width: 768px) {
-    .recientes {
+    
+    @media screen and (min-width: 768px) {
       display: flex;
       justify-content: center;
       
@@ -585,10 +573,8 @@ section {
         }
       }
     }
-  }
-  
-  @media screen and (max-width: 767px) {
-    .recientes {
+    
+    @media screen and (max-width: 767px) {
       .text-center {
         display: flex;
         flex-wrap: wrap;
