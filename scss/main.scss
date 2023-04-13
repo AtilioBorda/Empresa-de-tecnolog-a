@@ -1,107 +1,122 @@
 body{
   font-family: 'Times New Roman', Times, serif;
+  margin: 0;
+  padding: 0;
 }
 
 .slider {
-padding: 0 10px;
-width: 50%;
-margin: auto;
-overflow: hidden;
-height: 600px;
-
-ul {
+  width: 100%;
+  margin: auto;
+  overflow: hidden;
+  height: 500px;
+  
+  ul {
   padding: 0;
   display: flex;
-  width: 400%;
-  animation: cambio 20s infinite alternate;
+  width: 200%;
+  height: 100%;
+  animation: cambio 20s alternate;
   animation-timing-function: linear;
-
   li {
-    width: 100%;
+    width: 25%;
     list-style: none;
-
+  
     img {
       width: 100%;
       height: auto;
     }
   }
-}
-
-@supports (object-fit: cover) {
-  img {
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-  }
-}
-
-@keyframes cambio {
-  0% {
-    margin-left: 0;
-  }
-  20% {
-    margin-left: 0;
-  }
-
-  25% {
-    margin-left: -100%;
-  }
-  45% {
-    margin-left: -100%;
-  }
-
-  50% {
-    margin-left: -200%;
-  }
-  70% {
-    margin-left: -200%;
-  }
-
-  75% {
-    margin-left: -300%;
-  }
-  100% {
-    margin-left: -300%;
-  }
-}
-
-@media only screen and (max-width: 599px) {
-  height: 300px;
-
-  ul {
-    width: 800%;
-  }
-
-  li {
-    img {
-      height: 300px;
-      object-fit: cover;
-      object-position: center;
+  
+  @for $i from 1 through 3 {
+    li:nth-child(#{$i}) {
+      background-image: url('path/to/image1');
+    }
+    li:nth-child(#{$i + 1}) {
+      background-image: url('path/to/image2');
+    }
+    li:nth-child(#{$i + 2}) {
+      background-image: url('path/to/image3');
+    }
+    li:nth-child(#{$i + 3}) {
+      background-image: url('path/to/image4');
     }
   }
 }
 
-@media only screen and (min-width: 600px) and (max-width: 1024px) {
-  ul {
-    width: 600%;
+@media (max-width: 768px) {
+height: 300px;
+ul {
+  width: 1200%;
+  height: 100%;
+
+  li img {
+    max-height: 300px;
+  }
+
+  ul::before {
+    width: 1200%;
+    transform: translateX(100%);
+  }
+}
+}
+@supports (object-fit: cover) {
+img {
+height: 100%;
+object-fit: cover;
+object-position: center;
+}
+}
+
+@keyframes cambio {
+0% {
+margin-left: 0;
+}
+20% {
+margin-left: 0;
+}
+25% {
+  margin-left: -100%;
+}
+45% {
+  margin-left: -100%;
+}
+
+50% {
+  margin-left: -200%;
+}
+70% {
+  margin-left: -200%;
+}
+
+75% {
+  margin-left: -300%;
+}
+100% {
+  margin-left: -300%;
+}
+}
+}
+@media (max-width: 768px) {
+  .slider {
+    height: 300px;
+  }
+
+  .slider ul {
+    width: 300%;
+    height: 100%;
+  }
+
+  .slider li img {
+    max-height: 300px;
+  }
+
+  .slider ul::before {
+    width: 300%;
+    transform: translateX(300%);
   }
 }
 
-@media only screen and (min-width: 1025px) {
-  ul {
-    width: 400%;
-  }
-}
-}
-
-.recientes img{
-  width: 400px;
-  height: 400px;
-  padding: 30px;
-  text-align: center;
-}
-
-body{
+  body{
   background:#eee;
   }
   .rev-section{
@@ -554,6 +569,7 @@ section {
       .productosrecientes {
         max-width: 100%;
         height: auto;
+        margin: 10px;
       }
     }
     
