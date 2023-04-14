@@ -93,7 +93,7 @@ ol, li {
   &__slide {
     position: relative;
     flex: 0 0 auto;
-    width: 100vw;
+    width: 100%;
     counter-increment: item;
     img {
       width: 100%;
@@ -105,7 +105,7 @@ ol, li {
       position: absolute;
       top: 50%;
       left: 50%;
-      transform: translate3d(-50%,-40%,55px);
+      transform: translate3d(-50%,-40%);
       color: #fff;
       font-size: 2em;
     }
@@ -449,14 +449,14 @@ article img{
   height: 200px;
 }
 
-
+h1{
+  text-align: center;
+}
 h3{
   text-align: center;
  
 }
-h1{
-  text-align: center;
-}
+
 nav.navbar {
   background-color: #f5f6f7;
   padding: 2rem;
@@ -605,18 +605,23 @@ nav.navbar {
     margin-bottom: 10px;
   }
 }
+nav {
+  margin-bottom: 20px;
+}
 
 section {
   display: flex;
-  justify-content: center;
   flex-wrap: wrap;
 
   article {
+    flex: 1;
+    text-align: center;
     margin: 10px;
     width: 200px;
 
     img {
-      width: 100%;
+      width: 50%;
+      margin-bottom: 10px;
     }
 
     a {
@@ -632,15 +637,32 @@ section {
       margin-bottom: 0;
     }
   }
-}
 
-@media (max-width: 768px) {
-  section {
+  @media only screen and (max-width: 767px) {
     article {
-      width: 100%;
+      width: 45%;
+    }
+  }
+
+  @media only screen and (min-width: 768px) and (max-width: 991px) {
+    article {
+      width: 30%;
+    }
+  }
+
+  @media only screen and (min-width: 992px) and (max-width: 1199px) {
+    article {
+      width: 20%;
+    }
+  }
+
+  @media only screen and (min-width: 1200px) {
+    article {
+      width: 10%;
     }
   }
 }
+
 .prorecientes {
   display: flex;
   flex-wrap: wrap;

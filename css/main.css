@@ -91,7 +91,7 @@ ol, li {
 .carousel__slide {
   position: relative;
   flex: 0 0 auto;
-  width: 100vw;
+  width: 100%;
   counter-increment: item;
 }
 .carousel__slide img {
@@ -104,7 +104,7 @@ ol, li {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate3d(-50%, -40%, 55px);
+  transform: translate3d(-50%, -40%);
   color: #fff;
   font-size: 2em;
 }
@@ -419,11 +419,11 @@ article img {
   height: 200px;
 }
 
-h3 {
+h1 {
   text-align: center;
 }
 
-h1 {
+h3 {
   text-align: center;
 }
 
@@ -554,17 +554,23 @@ nav.navbar.navbar .nav-item.active .nav-link {
   margin-bottom: 10px;
 }
 
+nav {
+  margin-bottom: 20px;
+}
+
 section {
   display: flex;
-  justify-content: center;
   flex-wrap: wrap;
 }
 section article {
+  flex: 1;
+  text-align: center;
   margin: 10px;
   width: 200px;
 }
 section article img {
-  width: 100%;
+  width: 50%;
+  margin-bottom: 10px;
 }
 section article a {
   color: black;
@@ -577,12 +583,27 @@ section article p {
   margin-top: 5px;
   margin-bottom: 0;
 }
-
-@media (max-width: 768px) {
+@media only screen and (max-width: 767px) {
   section article {
-    width: 100%;
+    width: 45%;
   }
 }
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  section article {
+    width: 30%;
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  section article {
+    width: 20%;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  section article {
+    width: 10%;
+  }
+}
+
 .prorecientes {
   display: flex;
   flex-wrap: wrap;
